@@ -1,21 +1,27 @@
 import React from "react";
-import { View, StatusBar } from "react-native";
+import { SafeAreaView, StyleSheet, View, StatusBar } from "react-native";
 import { Searchbar } from "react-native-paper";
-import styled from "styled-components-native";
-
-const ParentView = styled.View`
-  flex: 0.1;
-  margin-top: ${StatusBar.currentHeight}px;
-`;
-const SearchBar = styled.SearchBar`
-  background-color: white;
-  padding: 16px;
-`;
 
 export const HomeScreen = () => (
-  <ParentView>
-    <View>
-      <SearchBar />
+  <SafeAreaView style={styles.container}>
+    <View style={styles.searchBar}>
+      <Searchbar />
     </View>
-  </ParentView>
+  </SafeAreaView>
 );
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 0.1,
+    marginTop: StatusBar.currentHeight,
+  },
+  searchBar: {
+    backgroundColor: "white",
+    padding: 16,
+  },
+  listStyle: {
+    flex: 5,
+    backgroundColor: "blue",
+    padding: 16,
+  },
+});

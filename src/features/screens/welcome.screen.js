@@ -2,6 +2,8 @@ import React from "react";
 import { SafeAreaView } from "react-native";
 import Swiper from "react-native-swiper";
 import styled from "styled-components";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const SafeArea = styled(SafeAreaView)`
   background-color: white;
@@ -46,7 +48,7 @@ const DescriptionText = styled.Text`
   color: grey;
 `;
 
-export const WelcomeScreen = (props) => (
+export const WelcomeScreen = ({ navigation }) => (
   <>
     <Swiper loop autoplay dotColor="grey" activeDotColor="#fff">
       <SwipedImage
@@ -88,9 +90,7 @@ export const WelcomeScreen = (props) => (
       </DescriptionText>
       <GetStartedButtonView>
         <GetStartedTouchableOpacity
-          onPress={() => {
-            props.navigation.navigate("HomeScreen");
-          }}
+          onPress={() => navigation.navigate("HomeScreen")}
         >
           <GetStartedButtonText> Get Started</GetStartedButtonText>
         </GetStartedTouchableOpacity>

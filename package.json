@@ -16,6 +16,7 @@
     "react-native": "0.70.5",
     "react-native-paper": "^4.12.5",
     "react-native-swiper": "^1.6.0",
+    "react.dom": "^1.0.1",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

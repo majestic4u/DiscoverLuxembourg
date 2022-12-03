@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, View, StatusBar } from "react-native";
+import { SafeAreaView, StyleSheet, View, StatusBar } from "react-native";
 import { Searchbar } from "react-native-paper";
 
 export const HomeScreen = () => (
@@ -7,15 +7,12 @@ export const HomeScreen = () => (
     <View style={styles.searchBar}>
       <Searchbar />
     </View>
-    <View style={styles.listStyle}>
-      <Text>List</Text>
-    </View>
   </SafeAreaView>
 );
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 0.1,
     marginTop: StatusBar.currentHeight,
   },
   searchBar: {

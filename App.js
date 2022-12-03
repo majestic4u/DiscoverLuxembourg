@@ -10,11 +10,12 @@ export default function App() {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{ headerShown: false }}
-          initialRouteName="WelcomeScreen"
-        >
-          <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+        <Stack.Navigator initialRouteName="WelcomeScreen">
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="WelcomeScreen"
+            component={WelcomeScreen}
+          />
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
         </Stack.Navigator>
         <ExpoStatusBar style="auto" />

@@ -2,8 +2,6 @@ import React from "react";
 import { SafeAreaView } from "react-native";
 import Swiper from "react-native-swiper";
 import styled from "styled-components";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const SafeArea = styled(SafeAreaView)`
   background-color: white;

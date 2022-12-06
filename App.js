@@ -36,7 +36,11 @@ export default function App() {
               name="WelcomeScreen"
               component={WelcomeScreen}
             />
-            <Stack.Screen name="HomeScreen" component={HomeScreen} />
+            <Stack.Screen
+              options={{ headerShown: true }}
+              name="HomeScreen"
+              component={HomeScreen}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </ThemeProvider>

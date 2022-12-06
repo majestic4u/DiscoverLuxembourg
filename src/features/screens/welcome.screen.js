@@ -33,6 +33,7 @@ const GetStartedButtonView = styled(View)`
   padding: ${(props) => props.theme.sizes[3]};
   padding-left: ${(props) => props.theme.sizes[4]};
   padding-right: ${(props) => props.theme.sizes[4]};
+  padding-bottom: ${(props) => props.theme.sizes[4]};
   flex-direction: row;
 `;
 const DescriptionText = styled(Text)`
@@ -40,13 +41,15 @@ const DescriptionText = styled(Text)`
   font-size: ${(props) => props.theme.fontSizes.button};
   padding-top: ${(props) => props.theme.sizes[2]};
   color: ${(props) => props.theme.colors.text.secondary};
+  width: 300px;
   align-self: center;
   text-align: center;
 `;
 
 export const WelcomeScreen = ({ navigation }) => (
   <>
-    <Swiper loop autoplay dotColor="grey" activeDotColor="#fff">
+    <ExpoStatusBar style="auto" />
+    <Swiper loop dotColor="grey" activeDotColor="#fff">
       <SwipedImage
         source={{
           uri: "https://images.unsplash.com/photo-1564591419939-c067a954ec9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
@@ -90,6 +93,5 @@ export const WelcomeScreen = ({ navigation }) => (
         <GetStartedButtonText> Get Started</GetStartedButtonText>
       </GetStartedTouchableOpacity>
     </GetStartedButtonView>
-    <ExpoStatusBar style="auto" />
   </>
 );

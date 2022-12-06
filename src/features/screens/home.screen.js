@@ -1,27 +1,34 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, View, StatusBar } from "react-native";
+import { View, StatusBar, Text } from "react-native";
 import { Searchbar } from "react-native-paper";
+import styled from "styled-components";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+const ParentView = styled.View`
+  flex: 1px;
+  margin-top: ${StatusBar.currentHeight}px;
+`;
+
+const Tab = createBottomTabNavigator();
+
+const Map = () => <Text> Map Screen </Text>;
+const Favorites = () => <Text> Map Screen </Text>;
+const About = () => <Text> Map Screen </Text>;
 
 export const HomeScreen = () => (
-  <SafeAreaView style={styles.container}>
-    <View style={styles.searchBar}>
+  <>
+    <View>
       <Searchbar />
     </View>
-  </SafeAreaView>
+    <ParentView>
+      <NavigationContainer independent={true}>
+        <Tab.Navigator>
+          <Tab.Screen name="Map" component={Map} />
+          <Tab.Screen name="Favorites" component={Favorites} />
+          <Tab.Screen name="About" component={About} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </ParentView>
+  </>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 0.1,
-    marginTop: StatusBar.currentHeight,
-  },
-  searchBar: {
-    backgroundColor: "white",
-    padding: 16,
-  },
-  listStyle: {
-    flex: 5,
-    backgroundColor: "blue",
-    padding: 16,
-  },
-});

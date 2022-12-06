@@ -1,49 +1,50 @@
 import React from "react";
-import { SafeAreaView } from "react-native";
+import { Image, SafeAreaView, Text, View } from "react-native";
 import Swiper from "react-native-swiper";
 import styled from "styled-components";
 
 const SafeArea = styled(SafeAreaView)`
-  background-color: white;
-  flex: 0.4;
+  background-color: ${(props) => props.theme.colors.bg.primary};
+  flex: 0.5;
 `;
-const SwipedImage = styled.Image`
-  flex: 1;
+const SwipedImage = styled(Image)`
+  flex: 1px;
 `;
-const Header = styled.Text`
-  font-size: 28px;
-  font-weight: bold;
+const Header = styled(Text)`
+  font-family: ${(props) => props.theme.fonts.body};
+  font-size: ${(props) => props.theme.fontSizes.h4};
+  font-weight: ${(props) => props.theme.fontWeights.bold};
+  padding-top: ${(props) => props.theme.sizes[2]};
+  color: ${(props) => props.theme.colors.text.primary};
   align-self: center;
   text-align: center;
-  padding-top: 20px;
-  color: black;
 `;
 const GetStartedTouchableOpacity = styled.TouchableOpacity`
-  padding: 16px;
-  background-color: black;
-  justify-content: center;
-  border-radius: 50px;
+  background-color: ${(props) => props.theme.colors.ui.primary};
+  border-radius: ${(props) => props.theme.sizes[3]};
   align-items: center;
   flex: 1px;
 `;
-const GetStartedButtonText = styled.Text`
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
+const GetStartedButtonText = styled(Text)`
+  padding-top: ${(props) => props.theme.sizes[2]};
+  padding-bottom: ${(props) => props.theme.sizes[2]};
+  font-size: ${(props) => props.theme.sizes[2]};
+  font-weight: ${(props) => props.theme.fontWeights.bold};
+  color: ${(props) => props.theme.colors.text.inverse};
 `;
-const GetStartedButtonView = styled.View`
+const GetStartedButtonView = styled(View)`
+  padding-left: ${(props) => props.theme.sizes[4]};
+  padding-right: ${(props) => props.theme.sizes[4]};
+  padding-top: ${(props) => props.theme.sizes[3]};
   flex-direction: row;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 30px;
 `;
-const DescriptionText = styled.Text`
-  font-size: 14px;
-  width: 300px;
+const DescriptionText = styled(Text)`
+  font-family: ${(props) => props.theme.fonts.heading};
+  font-size: ${(props) => props.theme.fontSizes.button};
+  padding-top: ${(props) => props.theme.sizes[2]};
+  color: ${(props) => props.theme.colors.text.secondary};
   align-self: center;
   text-align: center;
-  padding-top: 20px;
-  color: grey;
 `;
 
 export const WelcomeScreen = ({ navigation }) => (

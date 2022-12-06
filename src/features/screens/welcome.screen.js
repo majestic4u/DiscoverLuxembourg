@@ -1,12 +1,9 @@
 import React from "react";
-import { Image, SafeAreaView, Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import Swiper from "react-native-swiper";
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import styled from "styled-components";
 
-const SafeArea = styled(SafeAreaView)`
-  background-color: ${(props) => props.theme.colors.bg.primary};
-  flex: 0.5;
-`;
 const SwipedImage = styled(Image)`
   flex: 1px;
 `;
@@ -33,9 +30,10 @@ const GetStartedButtonText = styled(Text)`
   color: ${(props) => props.theme.colors.text.inverse};
 `;
 const GetStartedButtonView = styled(View)`
+  padding: ${(props) => props.theme.sizes[3]};
   padding-left: ${(props) => props.theme.sizes[4]};
   padding-right: ${(props) => props.theme.sizes[4]};
-  padding-top: ${(props) => props.theme.sizes[3]};
+
   flex-direction: row;
 `;
 const DescriptionText = styled(Text)`
@@ -81,19 +79,19 @@ export const WelcomeScreen = ({ navigation }) => (
         }}
       />
     </Swiper>
-    <SafeArea>
-      <Header>Discover Luxembourg City</Header>
-      <DescriptionText>
-        Discover the Culture and Attractions of the city through interesting
-        routes and more...
-      </DescriptionText>
-      <GetStartedButtonView>
-        <GetStartedTouchableOpacity
-          onPress={() => navigation.navigate("HomeScreen")}
-        >
-          <GetStartedButtonText> Get Started</GetStartedButtonText>
-        </GetStartedTouchableOpacity>
-      </GetStartedButtonView>
-    </SafeArea>
+    <Header>Discover Luxembourg City</Header>
+    <DescriptionText>
+      Discover the Culture and Attractions of the city through interesting
+      routes and more...
+    </DescriptionText>
+    <GetStartedButtonView>
+      <GetStartedTouchableOpacity
+        onPress={() => navigation.navigate("HomeScreen")}
+      >
+        <GetStartedButtonText> Get Started</GetStartedButtonText>
+      </GetStartedTouchableOpacity>
+    </GetStartedButtonView>
+
+    <ExpoStatusBar style="auto" />
   </>
 );

@@ -5,7 +5,7 @@ import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import styled from "styled-components";
 
 const SwipedImage = styled(Image)`
-  flex: 1px;
+  flex: 1;
 `;
 const Header = styled(Text)`
   font-family: ${(props) => props.theme.fonts.body};
@@ -20,7 +20,7 @@ const GetStartedTouchableOpacity = styled.TouchableOpacity`
   background-color: ${(props) => props.theme.colors.ui.primary};
   border-radius: ${(props) => props.theme.sizes[3]};
   align-items: center;
-  flex: 1px;
+  flex: 1;
 `;
 const GetStartedButtonText = styled(Text)`
   padding-top: ${(props) => props.theme.sizes[2]};
@@ -33,7 +33,6 @@ const GetStartedButtonView = styled(View)`
   padding: ${(props) => props.theme.sizes[3]};
   padding-left: ${(props) => props.theme.sizes[4]};
   padding-right: ${(props) => props.theme.sizes[4]};
-
   flex-direction: row;
 `;
 const DescriptionText = styled(Text)`
@@ -91,7 +90,6 @@ export const WelcomeScreen = ({ navigation }) => (
         <GetStartedButtonText> Get Started</GetStartedButtonText>
       </GetStartedTouchableOpacity>
     </GetStartedButtonView>
-
     <ExpoStatusBar style="auto" />
   </>
 );

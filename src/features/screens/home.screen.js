@@ -7,8 +7,8 @@ import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const ParentView = styled.View`
-  flex: 1px;
-  margin-top: ${StatusBar.currentHeight}px;
+  flex: 1;
+  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}`}px;
 `;
 
 const Tab = createBottomTabNavigator();

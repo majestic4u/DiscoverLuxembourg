@@ -25,6 +25,7 @@ export const HomeScreen = () => (
       <NavigationContainer independent={true}>
         <Tab.Navigator
           screenOptions={({ route }) => ({
+            // eslint-disable-next-line react/no-unstable-nested-components
             tabBarIcon: ({ color, size }) => {
               let iconName;
 
@@ -37,8 +38,6 @@ export const HomeScreen = () => (
               } else if (route.name === "Home") {
                 iconName = "md-home";
               }
-
-              // You can return any component that you like here!
               return <Ionicons name={iconName} size={size} color={color} />;
             },
             tabBarActiveTintColor: "black",

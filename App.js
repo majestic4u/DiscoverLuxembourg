@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeScreen } from "./src/features/screens/home.screen";
+import { MainScreen } from "./src/features/screens/main.screen";
 import { WelcomeScreen } from "./src/features/screens/welcome.screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -38,8 +38,8 @@ export default function App() {
             />
             <Stack.Screen
               options={{ headerShown: false }}
-              name="HomeScreen"
-              component={HomeScreen}
+              name="MainScreen"
+              component={MainScreen}
             />
           </Stack.Navigator>
         </NavigationContainer>

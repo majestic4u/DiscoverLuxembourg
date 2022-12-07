@@ -88,7 +88,7 @@ export const WelcomeScreen = ({ navigation }) => (
     </DescriptionText>
     <GetStartedButtonView>
       <GetStartedTouchableOpacity
-        onPress={() => navigation.navigate("HomeScreen")}
+        onPress={() => navigation.navigate("MainScreen")}
       >
         <GetStartedButtonText> Get Started</GetStartedButtonText>
       </GetStartedTouchableOpacity>

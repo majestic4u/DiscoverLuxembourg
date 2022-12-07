@@ -3,7 +3,7 @@ import { Text } from "react-native";
 
 const MapScreen = () => (
   <>
-    <Text>Map Screen</Text>
+    <Text>just a Map Screen</Text>
   </>
 );
 

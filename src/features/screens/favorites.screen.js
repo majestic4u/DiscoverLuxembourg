@@ -3,7 +3,7 @@ import { Text } from "react-native";
 
 const FavoritesScreen = () => (
   <>
-    <Text>Favorites Screen</Text>
+    <Text>my Favorites Screen</Text>
   </>
 );
 

@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
+import MainScreen from "../screens/main.screen";
 
 const ParentView = styled(View)`
   flex: 1;
@@ -14,7 +15,7 @@ const ParentView = styled(View)`
 const Tab = createBottomTabNavigator();
 
 const Map = () => <Text> Map Screen </Text>;
-const Home = () => <Text> Home Screen </Text>;
+// const Home = () => <Text> Home Screen </Text>;
 const Favorites = () => <Text> Favorites Screen </Text>;
 const About = () => <Text> About Screen </Text>;
 
@@ -35,7 +36,7 @@ export const HomeScreen = () => (
                 iconName = "md-heart";
               } else if (route.name === "About") {
                 iconName = "md-information";
-              } else if (route.name === "Home") {
+              } else if (route.name === "MainScreen") {
                 iconName = "md-home";
               }
               return <Ionicons name={iconName} size={size} color={color} />;
@@ -46,8 +47,8 @@ export const HomeScreen = () => (
         >
           <Tab.Screen
             options={{ headerShown: false }}
-            name="Home"
-            component={Home}
+            name="MainScreen"
+            component={MainScreen}
           />
           <Tab.Screen
             options={{ headerShown: false }}

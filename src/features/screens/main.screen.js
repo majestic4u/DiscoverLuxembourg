@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, SafeAreaView } from "react-native";
+import { Text, SafeAreaView, View, StatusBar } from "react-native";
 import { Searchbar } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -7,11 +7,16 @@ import { Ionicons } from "@expo/vector-icons";
 import FavoritesScreen from "./favorites.screen";
 import MapScreen from "./map.screen";
 import HomeScreen from "./home.screen";
-import { StyledView, ParentView } from "../../infrastracture/styles/view.style";
+import AboutScreen from "./about.screen";
+import { StyledView } from "../../infrastracture/styles/view.style";
+import styled from "styled-components/native";
+
+const ParentView = styled.View`
+  flex: 1;
+  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}`}px;
+`;
 
 const Tab = createBottomTabNavigator();
-
-const About = () => <Text> About Screen </Text>; // TO BE DELETED!
 
 export const MainScreen = () => (
   <>
@@ -61,7 +66,7 @@ export const MainScreen = () => (
           <Tab.Screen
             options={{ headerShown: false }}
             name="About"
-            component={About}
+            component={AboutScreen}
           />
         </Tab.Navigator>
       </NavigationContainer>

@@ -15,4 +15,5 @@ export const AttractionCardCover = styled(Card.Cover)`
 
 export const CardTitle = styled.Text`
   padding: ${(props) => props.theme.sizes[2]};
+  font-size: ${(props) => props.theme.fontSizes.body};
 `;

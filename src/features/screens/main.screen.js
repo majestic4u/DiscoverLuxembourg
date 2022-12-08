@@ -8,6 +8,7 @@ import { Ionicons } from "@expo/vector-icons";
 import FavoritesScreen from "./favorites.screen";
 import MapScreen from "./map.screen";
 import HomeScreen from "./home.screen";
+import { StyledView } from "../../infrastracture/styles/view.style";
 
 const ParentView = styled(View)`
   flex: 1;
@@ -22,7 +23,9 @@ export const MainScreen = () => (
   <>
     <ParentView>
       <SafeAreaView>
-        <Searchbar />
+        <StyledView>
+          <Searchbar />
+        </StyledView>
       </SafeAreaView>
       <NavigationContainer independent={true}>
         <Tab.Navigator

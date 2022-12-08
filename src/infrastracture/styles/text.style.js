@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export const StyledTitle = styled.Text`
   width: 350px;
-  font-family: ${(props) => props.theme.fonts.body};
+  font-family: ${(props) => props.theme.fonts.heading};
   font-size: ${(props) => props.theme.fontSizes.h3};
   padding-top: ${(props) => props.theme.sizes[2]};
   color: ${(props) => props.theme.colors.text.primary};

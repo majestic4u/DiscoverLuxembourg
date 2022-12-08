@@ -1,19 +1,13 @@
 import React from "react";
-import { View, StatusBar, Text, SafeAreaView } from "react-native";
+import { Text, SafeAreaView } from "react-native";
 import { Searchbar } from "react-native-paper";
-import styled from "styled-components";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import FavoritesScreen from "./favorites.screen";
 import MapScreen from "./map.screen";
 import HomeScreen from "./home.screen";
-import { StyledView } from "../../infrastracture/styles/view.style";
-
-const ParentView = styled(View)`
-  flex: 1;
-  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}`}px;
-`;
+import { StyledView, ParentView } from "../../infrastracture/styles/view.style";
 
 const Tab = createBottomTabNavigator();
 

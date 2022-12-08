@@ -1,9 +1,13 @@
 import React from "react";
-import { Text } from "react-native";
+import { AttractionInfoCard } from "../components/attractions-info-component";
 
 const HomeScreen = () => (
   <>
-    <Text>My Home Screen</Text>
+    <AttractionInfoCard />
+    <AttractionInfoCard />
+    <AttractionInfoCard />
+    <AttractionInfoCard />
+    <AttractionInfoCard />
   </>
 );
 

@@ -1,12 +1,7 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
 import Swiper from "react-native-swiper";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
-import styled from "styled-components";
-import {
-  StyledImage,
-  StyledView,
-} from "../../infrastracture/styles/view.style";
+import { StyledImage } from "../../infrastracture/styles/view.style";
 import {
   StyledTouchableOpacity,
   StyledButton,

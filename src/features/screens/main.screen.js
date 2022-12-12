@@ -1,12 +1,12 @@
 import React from "react";
-import { Text, SafeAreaView, View, StatusBar } from "react-native";
+import { SafeAreaView, StatusBar } from "react-native";
 import { Searchbar } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import FavoritesScreen from "./favorites.screen";
 import MapScreen from "./map.screen";
-import HomeScreen from "./home.screen";
+import { HomeScreen } from "./home.screen";
 import AboutScreen from "./about.screen";
 import { StyledView } from "../../infrastracture/styles/view.style";
 import styled from "styled-components/native";

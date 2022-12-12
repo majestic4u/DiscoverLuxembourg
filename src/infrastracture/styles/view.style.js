@@ -1,6 +1,10 @@
 import styled from "styled-components/native";
-import { StatusBar, View } from "expo-status-bar";
 
+export const StyledAttractionImage = styled.Image`
+  margin-bottom: 10px;
+  padding: 100px;
+  border-radius: 70px;
+`;
 export const StyledImage = styled.Image`
   flex: 1;
 `;

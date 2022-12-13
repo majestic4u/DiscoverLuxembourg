@@ -1,8 +1,8 @@
 import React from "react";
 import { Text } from "react-native";
 
-export const LuxembougCity = () => (
+export const GrandDucalPalace = () => (
   <>
-    <Text>GelleFra</Text>
+    <Text>GrandDucalPalace</Text>
   </>
 );

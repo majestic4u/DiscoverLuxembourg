@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { WelcomeScreen } from "../../features/screens/welcome.screen";
 
 import { MainScreenNavigator } from "./main.screen.navigator";
-import AttractionDetailsScreen from "../../features/screens/homescreen/attraction.details.screen";
+import { GelleFra, GrandDucalPalace } from "../../features/screens/homescreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,8 +24,13 @@ export const AppNavigator = () => (
         />
         <Stack.Screen
           options={{ headerShown: false }}
-          name="AttractionDetails"
-          component={AttractionDetailsScreen}
+          name="GelleFra"
+          component={GelleFra}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="GrandDucalPalace"
+          component={GrandDucalPalace}
         />
       </Stack.Navigator>
     </NavigationContainer>

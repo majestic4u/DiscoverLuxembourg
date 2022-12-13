@@ -15,11 +15,11 @@ import { TouchableOpacity } from "react-native";
 export const AttractionInfoCard = ({ attraction = {} }) => {
   const navigation = useNavigation();
   const {
-    name = ["Gelle Fra", "LuxembourgCity"],
+    name = ["Gelle Fra", "Grand Ducal Palace"],
     icon = <Fontisto name="heart" size={26} color="#DB070A" />,
     photos = [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/G%C3%ABlle_Fra_World_War_I_Memorial_Luxembourg_City_13_04_2008.jpg/800px-G%C3%ABlle_Fra_World_War_I_Memorial_Luxembourg_City_13_04_2008.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Luxembourg_-_panoramio_%2820%29.jpg/800px-Luxembourg_-_panoramio_%2820%29.jpg",
+      "https://cdn.pixabay.com/photo/2020/01/04/22/50/luxembourg-4741924_960_720.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ducal_Palace_%283753695748%29.jpg/800px-Ducal_Palace_%283753695748%29.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/1/13/Luxembourg_Bock_cliff.JPG",
       "https://upload.wikimedia.org/wikipedia/commons/b/b3/041102-abteineumuenster-luxemburg-hof.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Place_d%27Armes_Luxembourg.jpg/1280px-Place_d%27Armes_Luxembourg.jpg",
@@ -28,21 +28,39 @@ export const AttractionInfoCard = ({ attraction = {} }) => {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/LuxCenterCityScape.jpg/1920px-LuxCenterCityScape.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Luxembourg_Grund_from_Verlorenkost_01.jpg/1280px-Luxembourg_Grund_from_Verlorenkost_01.jpg",
     ],
-    address = "100 some random street",
+    address = [
+      "17 Rue du Marché-aux-Herbes, 1728 Luxembourg",
+      "Monument of Remembrance, 1143 Luxembourg",
+    ],
     addressIcon = <Ionicons name="location-sharp" size={24} color="black" />,
   } = attraction;
 
   return (
     <>
+      {/* First Card Grand Ducal Palace */}
       <StyledAttractionCard>
         <TouchableOpacity
-          onPress={() => navigation.navigate("AttractionDetails")}
+          onPress={() => navigation.navigate("GrandDucalPalace")}
         >
+          <StyledAttractionCardCover source={{ uri: photos[1] }} />
+        </TouchableOpacity>
+        <StyledCardTitle>{name[1]}</StyledCardTitle>
+        <StyledCardAddress>
+          {address[0]}
+          {addressIcon}
+        </StyledCardAddress>
+        <TouchableOpacity>
+          <StyledCardIcon>{icon}</StyledCardIcon>
+        </TouchableOpacity>
+      </StyledAttractionCard>
+      {/* 2nd Card Gelle Fra (Golden Lady) */}
+      <StyledAttractionCard>
+        <TouchableOpacity onPress={() => navigation.navigate("GelleFra")}>
           <StyledAttractionCardCover source={{ uri: photos[0] }} />
         </TouchableOpacity>
         <StyledCardTitle>{name[0]}</StyledCardTitle>
         <StyledCardAddress>
-          {address}
+          {address[1]}
           {addressIcon}
         </StyledCardAddress>
         <TouchableOpacity>

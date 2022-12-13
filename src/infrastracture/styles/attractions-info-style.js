@@ -12,13 +12,13 @@ export const StyledAttractionCardCover = styled(Card.Cover)`
 `;
 
 export const StyledCardTitle = styled.Text`
-  margin-top: ${(props) => props.theme.sizes[1]};
-  padding: ${(props) => props.theme.sizes[1]};
+  margin-top: ${(props) => props.theme.sizes[0]};
+  padding: ${(props) => props.theme.sizes[0]};
   font-size: ${(props) => props.theme.fontSizes.title};
   font-family: ${(props) => props.theme.fonts.heading};
 `;
 export const StyledCardAddress = styled.Text`
-  padding: ${(props) => props.theme.sizes[1]};
+  padding: ${(props) => props.theme.sizes[0]};
   font-size: ${(props) => props.theme.fontSizes.caption};
 `;
 

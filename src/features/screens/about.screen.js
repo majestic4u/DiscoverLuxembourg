@@ -1,10 +1,8 @@
 import React from "react";
 import { Text } from "react-native";
 
-const AboutScreen = () => (
+export const AboutScreen = () => (
   <>
     <Text>just About the App</Text>
   </>
 );
-
-export default AboutScreen;

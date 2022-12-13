@@ -1,19 +1,29 @@
 import styled from "styled-components/native";
 import { Card } from "react-native-paper";
 
-export const AttractionCard = styled(Card)`
+export const StyledAttractionCard = styled(Card)`
   background-color: ${(props) => props.theme.colors.bg.primary};
   margin-bottom: ${(props) => props.theme.sizes[1]};
   margin-top: ${(props) => props.theme.sizes[1]};
 `;
 
-export const AttractionCardCover = styled(Card.Cover)`
-  margin-top: ${(props) => props.theme.sizes[2]};
-  padding: ${(props) => props.theme.sizes[2]};
+export const StyledAttractionCardCover = styled(Card.Cover)`
   background-color: ${(props) => props.theme.colors.bg.primary};
 `;
 
-export const CardTitle = styled.Text`
-  padding: ${(props) => props.theme.sizes[2]};
-  font-size: ${(props) => props.theme.fontSizes.body};
+export const StyledCardTitle = styled.Text`
+  margin-top: ${(props) => props.theme.sizes[1]};
+  padding: ${(props) => props.theme.sizes[1]};
+  font-size: ${(props) => props.theme.fontSizes.title};
+  font-family: ${(props) => props.theme.fonts.heading};
+`;
+export const StyledCardAddress = styled.Text`
+  padding: ${(props) => props.theme.sizes[1]};
+  font-size: ${(props) => props.theme.fontSizes.caption};
+`;
+
+export const StyledCardIcon = styled.View`
+  position: relative;
+  left: 350px;
+  bottom: 40px;
 `;

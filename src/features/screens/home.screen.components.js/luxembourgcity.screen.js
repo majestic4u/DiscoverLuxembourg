@@ -1,12 +1,8 @@
-import { View, Text } from "react-native";
 import React from "react";
+import { Text } from "react-native";
 
-const LuxembourgCity = () => {
-  return (
-    <View>
-      <Text>LuxembourgCity</Text>
-    </View>
-  );
-};
-
-export default LuxembourgCity;
+export const LuxembougCity = () => (
+  <>
+    <Text>GelleFra</Text>
+  </>
+);

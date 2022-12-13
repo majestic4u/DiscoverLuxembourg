@@ -4,7 +4,18 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { WelcomeScreen } from "../../features/screens/welcome.screen";
 
 import { MainScreenNavigator } from "./main.screen.navigator";
-import { GelleFra, GrandDucalPalace } from "../../features/screens/homescreen";
+import {
+  GelleFra,
+  GrandDucalPalace,
+  PfaffenthalPanoramicElevator,
+  BockPromontory,
+  NotreDameCathedral,
+  AdolpheBridge,
+  NationalMuseumOfHistoryAndArt,
+  CheminDeLaCorniche,
+  MonumentOfRobertSchuman,
+  VillaVaubanMuseum,
+} from "../../features/screens/homescreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +42,46 @@ export const AppNavigator = () => (
           options={{ headerShown: false }}
           name="GrandDucalPalace"
           component={GrandDucalPalace}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="PfaffenthalPanoramicElevator"
+          component={PfaffenthalPanoramicElevator}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="BockPromontory"
+          component={BockPromontory}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="NotreDameCathedral"
+          component={NotreDameCathedral}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="AdolpheBridge"
+          component={AdolpheBridge}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="NationalMuseumOfHistoryAndArt"
+          component={NationalMuseumOfHistoryAndArt}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="CheminDeLaCorniche"
+          component={CheminDeLaCorniche}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="MonumentOfRobertSchuman"
+          component={MonumentOfRobertSchuman}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="VillaVaubanMuseum"
+          component={VillaVaubanMuseum}
         />
       </Stack.Navigator>
     </NavigationContainer>

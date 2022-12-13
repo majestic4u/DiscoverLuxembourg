@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { WelcomeScreen } from "../../features/screens/welcome.screen";
 
 import { MainScreenNavigator } from "./main.screen.navigator";
-import AttractionDetailsScreen from "../../features/screens/attraction.details.screen";
+import AttractionDetailsScreen from "../../features/screens/homescreen/attraction.details.screen";
 
 const Stack = createNativeStackNavigator();
 

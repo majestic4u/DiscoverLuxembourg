@@ -1,17 +1,13 @@
 import React from "react";
-import { MainScreen } from "./src/features/screens/main.screen";
-import { WelcomeScreen } from "./src/features/screens/welcome.screen";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { theme } from "./src/infrastracture/theme";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components/native";
 import {
   useFonts as useOswald,
   Oswald_400Regular,
 } from "@expo-google-fonts/oswald";
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
-
-const Stack = createNativeStackNavigator();
+import { AppNavigator } from "./src/infrastracture/navigation/app.navigator";
 
 export default function App() {
   const [oswaldLoaded] = useOswald({
@@ -29,21 +25,9 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <NavigationContainer>
-          <Stack.Navigator initialRouteName="WelcomeScreen">
-            <Stack.Screen
-              options={{ headerShown: false }}
-              name="WelcomeScreen"
-              component={WelcomeScreen}
-            />
-            <Stack.Screen
-              options={{ headerShown: false }}
-              name="MainScreen"
-              component={MainScreen}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
+        <AppNavigator />
       </ThemeProvider>
+      <ExpoStatusBar style="auto" />
     </>
   );
 }

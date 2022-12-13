@@ -8,7 +8,7 @@ export const StyledAttractionCard = styled(Card)`
 `;
 
 export const StyledAttractionCardCover = styled(Card.Cover)`
-  background-color: ${(props) => props.theme.colors.brand.muted};
+  background-color: ${(props) => props.theme.colors.bg.secondary};
 `;
 
 export const StyledCardTitle = styled.Text`

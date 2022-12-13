@@ -10,13 +10,10 @@ export const StyledButton = styled.Text`
   font-family: ${(props) => props.theme.fonts.heading};
   padding-top: ${(props) => props.theme.sizes[2]};
   padding-bottom: ${(props) => props.theme.sizes[2]};
-  font-size: ${(props) => props.theme.sizes[2]};
+  font-size: ${(props) => props.theme.fontSizes.title};
   color: ${(props) => props.theme.colors.text.inverse};
 `;
 export const StyledButtonView = styled.View`
-  padding: ${(props) => props.theme.sizes[3]};
-  padding-left: ${(props) => props.theme.sizes[4]};
-  padding-right: ${(props) => props.theme.sizes[4]};
-  padding-bottom: ${(props) => props.theme.sizes[4]};
+  padding: ${(props) => props.theme.sizes[4]};
   flex-direction: row;
 `;

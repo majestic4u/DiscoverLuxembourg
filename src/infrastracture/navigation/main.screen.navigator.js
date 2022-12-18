@@ -44,7 +44,11 @@ export const MainScreenNavigator = () => {
           name="Home"
           component={HomeScreen}
         />
-        <Tab.Screen name="Map" component={MapScreen} />
+        <Tab.Screen
+          options={{ headerShown: false }}
+          name="Map"
+          component={MapScreen}
+        />
         <Tab.Screen name="Favorites" component={FavoritesScreen} />
         <Tab.Screen name="About" component={AboutScreen} />
       </Tab.Navigator>

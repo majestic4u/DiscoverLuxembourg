@@ -119,7 +119,9 @@ export const AttractionInfoCard = ({ attraction = {} }) => {
       </StyledAttractionCard>
       {/* 5th Card EU Parliament in Luxembourg City*/}
       <StyledAttractionCard>
-        <TouchableOpacity onPress={() => navigation.navigate("EuParliament")}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("NotreDameCathedral")}
+        >
           <StyledAttractionCardCover source={{ uri: photos[4] }} />
         </TouchableOpacity>
         <StyledCardTitle>{name[4]}</StyledCardTitle>
